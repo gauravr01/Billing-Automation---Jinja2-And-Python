@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bill Template</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 100%;
+            width: 21cm;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #000;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .address {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contact-info {
+            text-align: right;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .note {
+            margin-top: 5px;
+        }
+        .vertical-line {
+            border-left: 2px solid #000; /* Adjust the width and color as needed */
+            height: 270px; /* Adjust the height of the line */
+        }
+        .footerl {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .footerm{
+            text-align: middle;
+            margin-top: 20px;
+        }
+        .footerr{
+            text-align: right;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <h2>Universal Bill</h2>
+        </div>
+
+        <div class="address">
+            <div>
+                <p>To.- {{ Name }} </p>
+                <p>{{ Address }}</p>
+                <p>{{ add2 }}</p>
+                            </div>
+            <div class="contact-info">
+                <p>12, Soham Nagar,</p>
+                <p>Mumbai </p>
+
+                <p>Mobile No. : 99823-23444</p>
+                <p>E-Mail : Om2004@gmail.com</p>
+            </div>
+        </div>
+        <hr>
+    <div class = address>
+        <div>
+            <p>No. - {{ no }} <br><br><br>
+               Date. - {{ date }}</p> 
+        </div>
+        <div class="contact-info">
+            <p>Please Find undermentioned bill for</p>
+            <p>arranging early payment, A/c payee</p>
+            <p>Cheque or Draft may please be issued in</p>
+            <p>favour of JAI MAHADEV, PALI Ref, /</p>
+            <p>Your Release Order No </p>
+        </div>
+
+    </div>
+    <hr>
+    <div class="address">
+        <div class="note">
+            <h3>PARTICULARS</h3>
+            <p>Publication of Your advertisement in JAI MAHADEV</p>
+       
+            <p>Issue No.- {{ IN }} Year - {{ year }} Page No. - {{ page }}</p>
+            <p>Space Consumed - {{ space }}</p>
+            <p>Mode - {{ mode }}</p>
+            <p>Additional - {{ addi }} </p>
+            <p>Old Due - {{ old }} Of Bill No. - {{ bill }}</p>
+            
+        </div>
+        <div class="vertical-line"></div>
+
+        <div class="contact-info">
+            <h3>AMOUNT</h3>
+            <h4>{{ Amount }}</h4>
+        </div>
+    </div>
+    <hr>
+    <div class="address">
+    <p>Rupees - {{ amt_in_text }} </p>
+    <p class="contact-info">{{ total }}</p>    
+    </div>
+    
+    <hr>
+    <div class="address">
+        <div class="footerl">
+            <p>E. & O. E.</p>
+            <br><br>    
+            <p>Prepared By</p>
+            <p>10/11/22</p>
+        </div>
+        
+        <div class="contact-info">
+            <p>For. JAI MAHADEV
+            </p>
+            <br><br>    
+            <br><br>
+            <p>Advt. Manager</p>
+        </div>
+    </div>
+    
+        <div class="address" style="border: 2px solid black; padding:20px;">
+        <div>
+            <p>Online Bank Money Transfer or NEFT</p>
+            <p>Bank Account- HDFC Bank</p>
+            <p>A/C No.- 12345678123456</p>
+            <p>A/C Holder Name- Shubh Sawai</p>
+            <p>IFSC CODE: HDFC1111111</p>
+        </div>
+
+        <div class="contact-info">
+            <p>For Cheque</p>
+            <p>A/C Name: Jay Mahadev / Shubh Sawai</p>
+            <p>Paytm - 9414155555</p>
+            <p>Google Pay - 9191919191</p>
+            <p>PAN -SBMPS1234Q</p>
+        </div>
+    </div>
+    
+    </div>
+    </div>
+</body>
+</html>
